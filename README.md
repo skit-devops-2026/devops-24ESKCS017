@@ -37,3 +37,4 @@ job fsd/
 - Responsive web design
 - Simple and clean navigation
 
+CI workflow verified successfully.
