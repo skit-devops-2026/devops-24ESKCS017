@@ -10,3 +10,13 @@
     height: 180px;
   }
 }
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 8px;
+  }
+}
