@@ -16,11 +16,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
-      - name: Check project files
-        run: |
-          test -f index.html
-          test -f main.js
-          test -f style.css
-          test -f responsive.css
-          test -f register.html
-          echo "All required FSD project files are present."
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Run FSD project tests
+        run: python -m unittest discover -v
