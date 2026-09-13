@@ -30,4 +30,10 @@ job fsd/
 ├── style.css
 ├── responsive.css
 └── README.md
+## Features
+
+- User-friendly job search interface
+- Job registration and application pages
+- Responsive web design
+- Simple and clean navigation
 
