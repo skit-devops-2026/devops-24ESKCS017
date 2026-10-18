@@ -1,7 +1,21 @@
 services:
   web:
     build: .
-    container_name: fsd-web
     ports:
-      - "8081:80"
+      - "8083:80"
+    restart: unless-stopped
+
+  blackbox:
+    image: prom/blackbox-exporter:latest
+    restart: unless-stopped
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: fsd-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    depends_on:
+      - blackbox
     restart: unless-stopped
