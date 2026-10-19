@@ -42,3 +42,23 @@ CI workflow verified successfully.
 CI verification run 3.
 CI verification run 4.
 CI verification run 5.
+
+
+## Docker Container Registry
+
+Docker image: `ghcr.io/skit-devops-2026/jobfsd-web:latest`
+
+Pull the image using:
+
+```bash
+docker pull ghcr.io/skit-devops-2026/jobfsd-web:latest
+```
+
+## Monitoring
+
+Prometheus configuration and monitoring evidence are available in the `monitoring/` directory.
+
+## Kubernetes
+
+Kubernetes Deployment and Service manifests are available in the `k8s/` directory.
+
