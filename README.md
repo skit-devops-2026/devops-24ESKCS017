@@ -20,7 +20,8 @@ Smart Job Portal is a web-based job portal project developed using HTML, CSS, Ja
 - CSS3
 - JavaScript
 - Bootstrap
-
+## live URL
+https://job-fsd-live.vercel.app/
 ## Project Structure
 
 ```text
