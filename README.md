@@ -46,12 +46,12 @@ CI verification run 5.
 
 ## Docker Container Registry
 
-Docker image: `ghcr.io/skit-devops-2026/jobfsd-web:latest`
+Docker image: `ghcr.io/skit-devops-2026/devops-24eskcs017:latest`
 
 Pull the image using:
 
 ```bash
-docker pull ghcr.io/skit-devops-2026/jobfsd-web:latest
+docker pull ghcr.io/skit-devops-2026/devops-24eskcs017:latest
 ```
 
 ## Monitoring

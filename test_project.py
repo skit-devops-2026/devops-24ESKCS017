@@ -20,6 +20,15 @@ class TestFSDProject(unittest.TestCase):
         content = Path("index.html").read_text(encoding="utf-8")
         self.assertIn("<html", content.lower())
 
+    def test_index_links_css_and_js(self):
+        content = Path("index.html").read_text(encoding="utf-8")
+        self.assertIn("style.css", content)
+        self.assertIn("main.js", content)
+
+    def test_register_has_form(self):
+        content = Path("register.html").read_text(encoding="utf-8").lower()
+        self.assertIn("<form", content)
+
 
 if __name__ == "__main__":
     unittest.main()
