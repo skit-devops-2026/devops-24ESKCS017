@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fsd-web
-          image: ghcr.io/skit-devops-2026/jobfsd-web:latest
+          image: ghcr.io/skit-devops-2026/devops-24eskcs017:latest
           ports:
             - containerPort: 80
           imagePullPolicy: Always
