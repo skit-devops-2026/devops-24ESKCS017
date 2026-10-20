@@ -6,12 +6,10 @@ Smart Job Portal is a web-based job portal project developed using HTML, CSS, Ja
 
 ## Features
 
-- User-friendly job portal interface
-- Job opportunity browsing interface
+- User-friendly job search and browsing interface
 - User registration page
 - Responsive design for different screen sizes
-- HTML, CSS and JavaScript based frontend
-- Bootstrap-based responsive components
+- Simple and clean navigation
 
 ## Technologies Used
 
@@ -19,30 +17,34 @@ Smart Job Portal is a web-based job portal project developed using HTML, CSS, Ja
 - CSS3
 - JavaScript
 - Bootstrap
+
 ## Live URL
+
 https://job-fsd-live.vercel.app/
+
 ## Project Structure
 
-```text
+```
 job fsd/
 ├── index.html
 ├── register.html
 ├── main.js
 ├── style.css
 ├── responsive.css
+├── test_project.py
+├── Dockerfile
+├── compose.yaml
+├── Jenkinsfile
+├── .github/workflows/ci.yml
+├── k8s/            (Deployment and Service manifests)
+├── monitoring/     (Prometheus config and Grafana dashboards)
+├── docs/           (deployment and monitoring screenshots)
 └── README.md
-## Features
+```
 
-- User-friendly job search interface
-- Job registration and application pages
-- Responsive web design
-- Simple and clean navigation
+## CI Pipeline
 
-CI workflow verified successfully.
-CI verification run 3.
-CI verification run 4.
-CI verification run 5.
-
+GitHub Actions runs on every push and pull request to `main`. The `test` job runs the test suite with pytest, and on `main` the `publish` job builds the Docker image and pushes it to the GitHub Container Registry.
 
 ## Docker Container Registry
 
@@ -54,11 +56,16 @@ Pull the image using:
 docker pull ghcr.io/skit-devops-2026/devops-24eskcs017:latest
 ```
 
+Run the full stack (site, Prometheus, Grafana) locally:
+
+```bash
+docker compose up --build
+```
+
 ## Monitoring
 
-Prometheus configuration and monitoring evidence are available in the `monitoring/` directory.
+Prometheus probes the site through the blackbox exporter, and Grafana dashboards are provided. The configuration and evidence are in the `monitoring/` directory.
 
 ## Kubernetes
 
-Kubernetes Deployment and Service manifests are available in the `k8s/` directory.
-
+Kubernetes Deployment and Service manifests are in the `k8s/` directory.
